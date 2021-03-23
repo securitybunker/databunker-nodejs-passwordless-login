@@ -1,0 +1,24 @@
+<h3>Check your email to confirm signin.</h3>
+<div id="root"></div>
+<script>
+  var host = '<%= websocketHost %>/authws';
+  var socket = new WebSocket(host);
+  socket.onopen = function(event) {
+    socket.send("<%= sessionid %>");
+  }
+  var num = 1;
+  socket.onmessage = function(e) {
+    if (e.data == "done") {
+      document.location = "welcome";
+    } else {
+      document.getElementById('root').innerHTML = num + " " + e.data;
+      socket.send("<%= sessionid %>");
+      num = num + 1;
+    }
+  };
+  socket.onclose = function(e) {
+    document.getElementById('root').innerHTML = 'socket closed';
+    setTimeout(function() {document.location = "/";}, 1000);
+  }
+</script>
+
