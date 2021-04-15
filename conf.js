@@ -1,18 +1,17 @@
 module.exports = {
   databunkerConf: {
-    url: 'http://localhost:3000/',
-    token: 'DEMO'
+    url: process.env.DATABUNKER_URL,
+    token: process.env.DATABUNKER_TOKEN
   },
   nodemailerConf: {
-    service: 'gmail',
+    service: process.env.NODEMAILER_SERVICE,
     auth: {
-      user: 'foo@gmail.com',
-      pass: 'password'
+      user: process.env.NODEMAILER_USER,
+      pass: process.env.NODEMAILER_PASS
     }
   },
-  emailFrom: 'foo@gmail.com',
-  host: 'http://localhost:4000',
-  websocketHost: 'ws://localhost:4000',
+  emailFrom: process.env.EMAIL_FROM,
+  host: process.env.HOST,
   authTryDelay: 1000,
   isUUID: function ( uuid ) {
     let s = "" + uuid;
