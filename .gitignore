@@ -1,3 +1,4 @@
 data/*
 node_modules
 databunker.env
+package-lock.json
