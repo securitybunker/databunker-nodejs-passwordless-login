@@ -1,8 +1,12 @@
 <h3>Check your email to confirm signin.</h3>
 <div id="root"></div>
 <script>
-  var host = '<%= websocketHost %>/authws';
-  var socket = new WebSocket(host);
+  const host = location.host;
+  var url = 'ws://' + host + '/authws';
+  if (location.protocol == 'https:') {
+    url = 'wss://' + host + '/authws';
+  }
+  var socket = new WebSocket(url);
   socket.onopen = function(event) {
     socket.send("<%= sessionid %>");
   }

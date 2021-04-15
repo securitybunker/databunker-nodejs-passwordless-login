@@ -31,8 +31,7 @@ router.post('/check',(req,res,next)=>{
   });
   console.log('url', url)
   res.render('check', {
-    'sessionid': req.sessionID,
-    'websocketHost': conf.websocketHost,
+    'sessionid': req.sessionID
   });
 });
 
