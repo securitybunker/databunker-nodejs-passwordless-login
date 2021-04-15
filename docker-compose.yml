@@ -1,0 +1,13 @@
+version: '3'
+services:
+  web:
+    build: .
+    env_file: web.env
+    ports:
+      - 4000:4000
+  databunker:
+    image: securitybunker/databunker:latest
+    command: demo
+    env_file: databunker.env
+    volumes:
+      - ./data:/databunker/data
