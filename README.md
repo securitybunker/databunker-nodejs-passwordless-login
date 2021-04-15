@@ -1,14 +1,11 @@
 # Roll your own passwordless login for Node.js with this code example
-databunker-nodejs-passwordless-login
 
 ## Run for the first time
 
-```./generate-databunker-env.sh``` - run this command to generate databunker.env file
-
-```docker-compose build``` - build web app container.
-
-```docker-compose up``` - to start the test.
-
+1. ```./generate-databunker-env.sh``` - run this command to generate databunker.env file
+2. ```docker-compose build``` - build web app container.
+3. ```docker-compose up``` - to start the test.
+4. Edit ```web.env``` to make sure it contains correct values.
 
 Open in your browser http://localhost:4000/
 
