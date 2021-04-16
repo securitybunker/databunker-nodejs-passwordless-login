@@ -1,0 +1,6 @@
+**/.git
+databunker.env
+web.env
+Dockerfile
+node_modules
+docker-compose.yml
