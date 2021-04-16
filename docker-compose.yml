@@ -3,11 +3,14 @@ services:
   web:
     build: .
     env_file: web.env
+    depends_on:
+      - databunker
     ports:
       - 4000:4000
   databunker:
     image: securitybunker/databunker:latest
     command: demo
+    # run generate-databunker-env.sh for the first time to generate databunker.env file.
     env_file: databunker.env
     volumes:
       - ./data:/databunker/data

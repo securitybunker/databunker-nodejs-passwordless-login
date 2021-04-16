@@ -2,8 +2,8 @@
 
 ## Run for the first time
 
-1. ```./generate-databunker-env.sh``` - run this command to generate databunker.env file
-2. ```docker-compose build``` - build web app container.
+1. ```./generate-databunker-env.sh``` - run this command will generate databunker.env file
+2. ```docker-compose build``` - build web application container.
 3. Edit ```web.env``` to make sure it contains correct values.
 4. ```docker-compose up``` - to start all containers (databunker and web app).
 
