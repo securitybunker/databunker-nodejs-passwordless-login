@@ -1,4 +1,4 @@
-# Roll your own passwordless login for Node.js with this code example
+# Roll your own passwordless login (aka Magic Link) for Node.js with this code example
 
 ## Run for the first time
 
